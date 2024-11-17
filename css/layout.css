@@ -1,0 +1,101 @@
+body {
+  max-height: 60vh;
+}
+
+.container {
+  max-width: 1400px;
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+.register {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "first-name last-name"
+    "email email"
+    "password confirm-password"
+    "gender hobbies"
+    "area-source-of-income income"
+    "upload age"
+    "bio bio"
+    " . create";
+  margin-top: 3em;
+  gap: 1.7em;
+}
+
+.area-first-name {
+  grid-area: first-name;
+}
+.area-last-name {
+  grid-area: last-name;
+}
+.area-email {
+  grid-area: email;
+}
+.area-password {
+  grid-area: password;
+}
+.area-confirm-password {
+  grid-area: confirm-password;
+}
+.area-gender {
+  grid-area: gender;
+}
+.area-hobbies {
+  grid-area: hobbies;
+}
+.area-area-source-of-income {
+  grid-area: area-source-of-income;
+}
+.area-income {
+  grid-area: income;
+}
+.area-upload {
+  grid-area: upload;
+}
+.area-age {
+  grid-area: age;
+}
+.area-bio {
+  grid-area: bio;
+}
+.area-create {
+  grid-area: create;
+}
+
+.area-income {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "grid-income-title grid-income-title grid-income-title grid-income-title grid-income-title"
+    "grid-income-range grid-income-range grid-income-range grid-income-range grid-income-number";
+}
+
+.grid-income-title {
+  grid-area: grid-income-title;
+}
+
+.grid-income-number {
+  grid-area: grid-income-number;
+  justify-self: end;
+}
+
+.grid-income-range {
+  grid-area: grid-income-range;
+}
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 750px;
+    min-width: 150px;
+    margin: 0 1em;
+  }
+
+  .area-income {
+    grid-template-areas:
+      "grid-income-title grid-income-number"
+      "grid-income-range grid-income-range";
+    margin-top: 0.5em;
+  }
+}

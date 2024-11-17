@@ -1,0 +1,38 @@
+.header {
+  background-color: var(--orange-color);
+}
+
+.header__navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.header__title {
+  width: 100%;
+  text-align: center;
+  margin: 2em auto;
+  font-size: var(--header-h1-size);
+  color: var(--white-text-color);
+  font-weight: var(--regular-weight);
+}
+
+.header__logo {
+  position: absolute;
+  bottom: -3em;
+  right: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .header__title {
+    display: block;
+    min-height: 5em;
+    margin: 1em auto;
+  }
+
+  .header__logo {
+    width: 250px;
+    bottom: -2em;
+  }
+}

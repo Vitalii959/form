@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__navbar">
+          <h1 class="header__title">Create Account</h1>
+          <img class="header__logo" src="img/Group 1187.png" alt="foxmaided" />
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="register">
+          <form class="register__form area-first-name" action="">
+            <div class="register__label">
+              <label class="register__label-text" for="first-name">First name*</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" type="text" maxlength="10" placeholder="Enter your first name" id="first-name-input" />
+              <div class="register__field-error_return" id="firts-name-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-last-name" action="">
+            <div class="register__label">
+              <label class="register__label-text" for="last-name">Last Name*</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" maxlength="10" type="text" placeholder="Enter your last name" id="last-name-input" />
+              <div class="register__field-error_return" id="last-name-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-email" action="">
+            <div class="register__label">
+              <label class="register__label-text" for="email">Email*</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" type="email" placeholder="Enter your email" id="email-input" />
+              <div class="register__field-error_return" id="email-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-password" action="">
+            <div class="register__label">
+              <label class="register__label-text" for="password">Password*</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" type="password" placeholder="*************" id="password-input" />
+              <div class="register__field-error_return" id="password-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-confirm-password" action="">
+            <div class="register__label">
+              <label class="register__label-text" for="confirm-password-input">Confirm Password*</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" type="password" placeholder="Enter correct your confirm password" id="confirm-password-input" />
+              <div class="register__field-error_return" id="confirm-password-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-gender">
+            <div class="register__label">
+              <label  class="register__label-text">Gender:</label>
+            </div>
+            <div class="register__checkbox">
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" checked type="radio" id="male" name="gender" value="male" />
+                <label class="register__checkbox-label"  for="male">Male</label>
+              </div>
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" type="radio" id="female" name="gender" value="female" />
+                <label class="register__checkbox-label" for="female">Female</label>
+              </div>
+            </div>
+          </form>
+          <form class="register__form area-hobbies">
+            <div class="register__label">
+              <label class="register__label-text">Hobbies:</label>
+            </div>
+            <div class="register__checkbox">
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" type="checkbox" id="music" name="hobbie" value="music" />
+                <label class="register__checkbox-label" for="music">Music</label>
+              </div>
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" type="checkbox" id="sports" name="hobbie" value="sports" />
+                <label class="register__checkbox-label" for="sports">Sports</label>
+              </div>
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" type="checkbox" id="travel" name="hobbie" value="travel" />
+                <label class="register__checkbox-label" for="travel">Travel</label>
+              </div>
+              <div class="register__checkbox-button">
+                <input class="register__checkbox-input" type="checkbox" id="movies" name="hobbie" value="movies" />
+                <label class="register__checkbox-label" for="movies">Movies</label>
+              </div>
+            </div>
+          </form>
+          <form class="register__form area-source-of-income">
+            <div class="register__label">
+              <label class="register__label-text" for="source-of-income">Source of Income</label>
+            </div>
+            <div class="register__field register__source">
+              <select class="register__field-select" name="source-of-income" id="source-of-income">
+                <option value="studentFoxMinded">Student Foxminded</option>
+                <option value="employed">Employed</option>
+                <option value="unemployed">Unemployed</option>
+              </select>
+            </div>
+          </form>
+          <form class="area-income" ">
+            <div class="register__label grid-income-title">
+              <label class="register__label-text" for="income">Income</label>
+            </div>
+            <div class="grid-income-number">
+              <output class="register__income-output" id="x" for="a">20</output>
+              <input class="input" type="number" id="b" value="0" hidden/>
+            </div>
+            <div class="income__range grid-income-range">
+              <input class="register__income-range" type="range" id="a" oninput="calculateSum()" value="20" />
+            </div>
+          </form>
+          <form class="register__form area-upload">
+            <div class="register__label">
+              <label class="register__label-text" for="file">Upload Profile Pictures</label>
+            </div>
+            <div class="register__file">
+              <input class="register__file-input" accept="image/png" type="file" id="upload-btn" name="filename" />
+              <div class="register__field-error_return" id="file-output">0/2000KB</div>
+            </div>
+          </form>
+          <form class="register__form area-age">
+            <div class="register__label">
+              <label class="register__label-text" for="age">Age</label>
+            </div>
+            <div class="register__field">
+              <input class="register__field-input" type="text" id="age-input" name="age" />
+              <div class="register__field-error_return" id="age-output"></div>
+            </div>
+          </form>
+          <form class="register__form area-bio">
+            <div class="register__label">
+              <label class="register__label-text" for="bio">Bio</label>
+            </div>
+            <div class="register__field">
+              <textarea class="register__field-textarea" name="" id="bio" placeholder="Tell about your self" rows="5"></textarea>
+            </div>
+          </form>
+          <form class="register__form area-create">
+            <div class="register__button">
+              <input class="register__button-input" type="button" value="Create" />
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
